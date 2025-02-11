@@ -1,6 +1,8 @@
 import{Container,Navbar as NavbarBS,Nav,Button} from "react-bootstrap"
 import { NavLink } from "react-router"
+import { useCartContext } from "../assets/context/CartContext"
 function Navbar(){
+    const{cartQty,openCart,closeCart}=useCartContext()
     return(<>
     <NavbarBS className="bg-dark text-light ">
         <Nav className="me-auto">
@@ -14,7 +16,7 @@ function Navbar(){
             about
             </Nav.Link>
             </Nav>
-            <Button variant="outline-light" style={{width:"3rem",height:"3rem",position:"relative",fontSize:"1.2rem"}}>
+            <Button variant="outline-light" style={{width:"3rem",height:"3rem",position:"relative",fontSize:"1.2rem"}} onClick={openCart}>
                 <i className="bi bi-cart"></i>
                 <div className="rounded-circle  bg-secondary d-flex justify-content-center  align-items-center"
                 style={{
@@ -30,7 +32,7 @@ function Navbar(){
 
                 }}
                 
-                >3</div>
+                >{cartQty}</div>
             </Button>
 
 
