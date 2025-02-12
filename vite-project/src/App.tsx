@@ -1,5 +1,5 @@
 
-import{Routes,Route, BrowserRouter} from "react-router-dom"
+import{Routes,Route} from "react-router-dom"
 import Home from './pages/Home'
 import About from './pages/About'
 import Shop from './pages/Shop'
@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}/>
         <Route path="/shop" element={<Shop></Shop>}/>
-        <Route path="/shop" element={<Shop></Shop>}/>
+        <Route path="/about" element={<About></About>}/>
       </Routes>
       </Container>
  

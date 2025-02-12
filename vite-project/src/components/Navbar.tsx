@@ -1,8 +1,8 @@
-import{Container,Navbar as NavbarBS,Nav,Button} from "react-bootstrap"
+import{Navbar as NavbarBS,Nav,Button} from "react-bootstrap"
 import { NavLink } from "react-router"
 import { useCartContext } from "../assets/context/CartContext"
 function Navbar(){
-    const{cartQty,openCart,closeCart}=useCartContext()
+    const{cartQty,openCart}=useCartContext()
     return(<>
     <NavbarBS className="bg-dark text-light ">
         <Nav className="me-auto">
